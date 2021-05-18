@@ -726,7 +726,10 @@
 			if(numberOfItemsSelected > 0)
 			{
 				$(".cart-content-container").show();
-				$(clickedButton).parent().find(".cart-alert").show().fadeOut(500);
+				$(clickedButton).parent().find(".cart-alert").show().addClass("fade-out");
+				setTimeout(()=> {
+					$(".cart-alert").hide();
+				}, 500);
 				$("sub").text(`${count += numberOfItemsSelected}`);
 				let itemAndPrice = $(clickedButton).parent().find("figcaption");
 				let amount = Number($(itemAndPrice[1]).text().match(/[0-9]+/g).toString());
@@ -819,7 +822,7 @@
 	
 	//-----------------This hides and reveals the cart and applies fadeout effect for 1 second --------------------
 	$(".hide-cart").click(() => {
-		$(".cart-content-container").fadeOut(1000);
+		$(".cart-content-container").hide();
 	})
 	$(".cart").click(() => {
 		$(".cart-content-container").toggle();

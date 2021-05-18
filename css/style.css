@@ -402,6 +402,30 @@ p img{
 	color:white;
 }
 
+
+.fade-out{
+	animation: fadeOut 0.5s ease;
+}
+@keyframes fadeOut{
+	0%{
+		opacity:1.0;
+	}
+	20%{
+		opacity:0.8;
+	}
+	40%{
+		opacity:0.6;
+	}
+	60%{
+		opacity:0.4;
+	}
+	80%{
+		opacity:0.2;
+	}
+	100%{
+		opacity:0.0;
+	}
+}
  /* ------------------------------------------------------Media Queries------------------------------- */
 @media screen and (max-width:1250px){
 	.description img{
